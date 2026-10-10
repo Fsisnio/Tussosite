@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — People and Places</title>
+  <meta name="description" content="Write to Emmanuel Awohouedji about a PPI review, writing, English, or research.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,560;1,9..144,480;1,9..144,560&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site">
+    <a class="brand" href="index.html">
+      <span class="brand-people">People</span>
+      <span class="brand-places">and Places</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="ppi.html">The Index</a>
+      <a href="writing.html">Writing</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main id="content" class="page">
+    <figure class="accroche">
+      <img src="assets/banner-contact.jpg" width="952" height="388" alt="Aerial view of a dense city of low buildings and red roofs">
+      <figcaption>London · Benin</figcaption>
+    </figure>
+    <section>
+      <div class="wrap contact-grid">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Send a paragraph, or a question.</h2>
+          <p>For a PPI review, email one paragraph from a report, brief, or project draft. Say what the document is for, who it is for, and the deadline. Anything shared is treated as confidential.</p>
+          <ul class="contact-list">
+            <li><a href="mailto:emmanuel.awohouedji@gmail.com">emmanuel.awohouedji@gmail.com</a></li>
+            <li><a href="mailto:experts@peoplanplaces.com">experts@peoplanplaces.com</a> — writing and English</li>
+            <li><a href="https://wa.me/447955193267">+44 7955 19 32 67</a> — WhatsApp</li>
+            <li><a href="https://emmanuelawohouedji.substack.com/">emmanuelawohouedji.substack.com</a></li>
+          </ul>
+        </div>
+        <form id="enquire">
+          <label>Name
+            <input name="name" type="text" required autocomplete="name">
+          </label>
+          <label>Email
+            <input name="email" type="email" required autocomplete="email">
+          </label>
+          <label>About
+            <select name="topic">
+              <option>PPI review</option>
+              <option>Writing</option>
+              <option>English</option>
+              <option>Research</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" required></textarea>
+          </label>
+          <button class="btn" type="submit">Open email</button>
+          <p class="form-note">This opens your mail app with the message ready. Writing and English enquiries go to experts@peoplanplaces.com. Everything else goes to the Gmail address.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <span>People and Places · Emmanuel Awohouedji</span>
+    <a href="index.html">Back home</a>
+  </footer>
+  <script src="site.js"></script>
+</body>
+</html>
