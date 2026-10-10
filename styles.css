@@ -568,6 +568,7 @@ footer.site {
   padding: 1.4rem var(--pad) 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
   font-family: var(--sans);
@@ -575,6 +576,15 @@ footer.site {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-soft);
+}
+
+footer.site .credit span {
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+footer.site .credit:hover {
+  color: var(--clay);
 }
 
 /* PPI page */
