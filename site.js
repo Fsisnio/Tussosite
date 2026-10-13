@@ -17,6 +17,19 @@ if (toggle && nav) {
   });
 }
 
+const langButtons = document.querySelectorAll("[data-lang]");
+langButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const lang = button.getAttribute("data-lang");
+    langButtons.forEach((item) => {
+      item.setAttribute("aria-selected", item === button ? "true" : "false");
+    });
+    document.querySelectorAll("[data-panel]").forEach((panel) => {
+      panel.hidden = panel.getAttribute("data-panel") !== lang;
+    });
+  });
+});
+
 const form = document.querySelector("#enquire");
 if (form) {
   const requested = new URLSearchParams(window.location.search).get("topic");
