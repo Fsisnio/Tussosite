@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Are we a fit? — People and Places</title>
+<meta name="description" content="Three questions to see whether a project is a fit for People and Places, Emmanuel Awohouedji, PhD.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --stage:#2B2B2B; --navy:#1F3A5F; --brick:#A44A3F; --brick-light:#C96A5C; --teal:#2F5E4E;
+    --cream:#F4F1EA; --cream-muted:#BBB4A6; --footer:#8C877C;
+    --card:#FBFAF6; --ink:#2B2B28; --muted:#6E6A5E;
+    --line:#E3DDD0; --optbg:#FFFFFF; --opthover:#F5EFE4;
+    --shadow:0 2px 8px rgba(0,0,0,.28),0 18px 48px rgba(0,0,0,.40);
+    --serif:"Spectral",Georgia,"Times New Roman",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+    box-sizing:border-box;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--stage); color:var(--cream); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:720px; margin:0 auto; padding:0 22px 72px;}
+
+  header{text-align:center; padding:36px 0 10px}
+  .banner{display:block; width:100%; height:auto; background:var(--cream)}
+  h1{font-family:var(--serif); font-weight:600; font-size:clamp(32px,6.2vw,50px); line-height:1.06; margin:22px 0 0; color:var(--cream); letter-spacing:-.01em}
+  .lede{font-family:var(--serif); font-size:clamp(17px,2.6vw,20px); color:var(--cream-muted); font-style:italic; max-width:40ch; margin:18px auto 0}
+  .rule{width:48px; height:3px; background:var(--brick-light); border-radius:3px; margin:30px auto}
+
+  .card{background:var(--card); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow); padding:30px 26px; margin-top:24px}
+  .step{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--brick); font-weight:600; margin:0 0 6px}
+  .q{font-family:var(--serif); font-size:clamp(21px,3.4vw,27px); font-weight:600; margin:0 0 20px; color:var(--navy); line-height:1.25}
+  .opts{display:grid; gap:11px}
+  .opt{display:flex; align-items:center; gap:14px; text-align:left; width:100%; cursor:pointer;
+    background:var(--optbg); border:1px solid var(--line); border-radius:12px; padding:15px 17px; color:var(--ink);
+    font:500 15.5px/1.4 var(--sans); transition:border-color .15s, background .15s, transform .05s}
+  .opt:hover{border-color:var(--brick); background:var(--opthover)}
+  .opt:active{transform:translateY(1px)}
+  .opt .dot{flex:0 0 auto; width:11px; height:11px; border-radius:50%; border:2px solid var(--brick)}
+  .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px}
+  .back{background:transparent; border:0; color:var(--muted); font:500 14px var(--sans); cursor:pointer; padding:8px 4px}
+  .back:hover{color:var(--brick)}
+
+  .begin{display:inline-flex; align-items:center; gap:10px; background:var(--brick); color:#fff; border:0; border-radius:999px;
+    font:600 16px var(--sans); padding:15px 32px; cursor:pointer; transition:transform .05s, opacity .15s}
+  .begin:hover{opacity:.93}
+  .begin:active{transform:translateY(1px)}
+  .center{text-align:center}
+
+  .rhead{font-family:var(--serif); font-size:clamp(22px,4vw,30px); font-weight:600; color:var(--navy); margin:0 0 14px; line-height:1.2}
+  .rbody{font-size:16.5px; color:var(--ink); margin:0 0 8px}
+  .tag{display:inline-block; font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--brick); font-weight:600; margin-bottom:14px}
+  .actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:24px}
+  .cta{display:inline-flex; align-items:center; gap:9px; border-radius:999px; font:600 15.5px var(--sans); padding:14px 26px; cursor:pointer; text-decoration:none; border:1px solid transparent; transition:opacity .15s, transform .05s}
+  .cta:active{transform:translateY(1px)}
+  .cta.primary{background:var(--brick); color:#fff}
+  .cta.secondary{background:transparent; color:var(--teal); border-color:var(--teal)}
+  .cta:hover{opacity:.9}
+  .subtle{margin-top:20px; font-size:14.5px; color:var(--muted)}
+  .subtle a{color:var(--teal); text-decoration:none; border-bottom:1px solid currentColor}
+  .footer{text-align:center; margin-top:44px; font-size:13px; color:var(--footer)}
+  .footer a{color:var(--cream-muted); text-decoration:none; border-bottom:1px solid transparent}
+  .footer a:hover{border-bottom-color:currentColor}
+  .footer .credit span{letter-spacing:.01em}
+  @media (max-width:520px){ .card{padding:24px 18px} .cta{flex:1 1 auto; justify-content:center} }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <a href="index.html">
+      <img class="banner" src="assets/banner-brand.png" width="1100" height="220" alt="People, Places and Knowledge to Action — by Emmanuel C. P. Awohouedji, PhD">
+    </a>
+    <h1>Let's see if we're a fit.</h1>
+    <p class="lede">Applying PhD-level rigour to read, write, and consult on urban and environmental change.</p>
+    <div class="rule"></div>
+  </header>
+
+  <div id="app"></div>
+
+  <div class="footer">
+    <p>People &amp; Places — Emmanuel Awohouedji, PhD</p>
+    <p><a href="index.html">The site</a> · <a class="credit" href="https://www.spparow.org">Powered by <span>SpparoW</span></a></p>
+  </div>
+</div>
+
+<script>
+var EXPERTS = "experts@peoplanplaces.com";
+var BOOKING_URL = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2o87e62cbN9CJ_osaK5Whq7PfThh_59egOKUDDzX-HF2-EyHskZ9K3xcab_bQLz6yufgFEoceS";
+var SUBSTACK_URL = "https://emmanuelawohouedji.substack.com/";
+
+var state = { step:"intro", who:null, need:null, stage:null };
+
+var QUESTIONS = [
+  { key:"who", step:"1 of 3", q:"First — who's reaching out?",
+    opts:[
+      ["org","An organisation or NGO"],
+      ["researcher","A researcher or academic"],
+      ["institution","A university, school, or programme"],
+      ["individual","An individual, or something else"]
+    ]},
+  { key:"need", step:"2 of 3", q:"What are you hoping to do together?",
+    opts:[
+      ["consulting","Consulting &amp; advisory on an urban or environmental question"],
+      ["accompaniment","Guidance or accompaniment for a project, team, or organisation"],
+      ["education","An educational partnership, workshop, or training"],
+      ["translation","Research translation or policy writing — a brief, paper, or report"],
+      ["else","Something else"]
+    ]},
+  { key:"stage", step:"3 of 3", q:"Where is it right now?",
+    opts:[
+      ["defined","A defined project, with a timeline and resources"],
+      ["ongoing","A live, ongoing need"],
+      ["early","An idea still taking shape"],
+      ["exploring","Just exploring for now"]
+    ]}
+];
+
+var RESULTS = {
+  A:{ tag:"A strong fit",
+    h:"This sounds like a strong fit — let's talk.",
+    b:"What you've described is exactly the kind of work I love to take on. I'd be glad to understand your context properly and see how we might work together. The quickest way forward is a short email or a call — whichever suits you." },
+  B:{ tag:"Promising — worth a conversation",
+    h:"I'd be happy to help you think this through.",
+    b:"It sounds early — which is a good moment to talk, before the shape is fixed. Drop me a line or book a call and we'll figure out whether, and how, I can be useful. No pressure either way." },
+  C:{ tag:"Possibly outside my core focus",
+    h:"I'm not sure I'm the right person — but let's see.",
+    b:"Honestly, what you've described sits a little outside my core work, and I'd rather tell you that than overpromise. Still, if you think there's a real connection to urban or environmental questions, send me a note and we'll see. You're also very welcome on the Substack." }
+};
+
+function tier(){
+  var core = (state.need==="consulting"||state.need==="accompaniment"||state.need==="education");
+  var serious = (state.stage==="defined"||state.stage==="ongoing");
+  if(!core) return "C";
+  return serious ? "A" : "B";
+}
+
+function mailtoHref(){
+  var email = EXPERTS;
+  var label = {org:"Organisation / NGO",researcher:"Researcher / academic",institution:"University / school / programme",individual:"Individual / other"}[state.who]||"";
+  var need = {consulting:"Consulting & advisory",accompaniment:"Guidance / accompaniment",education:"Educational partnership / training",translation:"Research translation / policy writing",else:"Something else"}[state.need]||"";
+  var stage = {defined:"Defined project (timeline + resources)",ongoing:"Live, ongoing need",early:"Idea taking shape",exploring:"Just exploring"}[state.stage]||"";
+  var subject = "People & Places enquiry";
+  var body = "Hello Emmanuel,\n\nI came through the People & Places page. A little about my enquiry:\n\n• Who I am: "+label+"\n• What I'm hoping to do: "+need+"\n• Where it is now: "+stage+"\n\n[ add a few lines about your context here ]\n\nThank you,\n";
+  return "mailto:"+email+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body);
+}
+
+var app = document.getElementById("app");
+
+function render(){
+  if(state.step==="intro"){
+    app.innerHTML =
+      '<div class="card center">'+
+      '<p class="step">A few quick questions</p>'+
+      '<p class="q" style="margin-bottom:8px">Three taps, and I\'ll tell you — honestly — whether we\'re a good match.</p>'+
+      '<p style="color:var(--muted); margin:0 0 24px">However it turns out, you\'ll leave with a clear next step.</p>'+
+      '<button class="begin" id="go">Begin &nbsp;&rarr;</button>'+
+      '</div>';
+    document.getElementById("go").onclick=function(){ state.step=0; render(); };
+    return;
+  }
+  if(typeof state.step==="number"){
+    var Q = QUESTIONS[state.step];
+    var opts = Q.opts.map(function(o){
+      return '<button class="opt" data-val="'+o[0]+'"><span class="dot"></span><span>'+o[1]+'</span></button>';
+    }).join("");
+    app.innerHTML =
+      '<div class="card">'+
+      '<p class="step">Question '+Q.step+'</p>'+
+      '<p class="q">'+Q.q+'</p>'+
+      '<div class="opts">'+opts+'</div>'+
+      (state.step>0?'<div class="btnrow"><button class="back" id="back">&larr; Back</button></div>':'')+
+      '</div>';
+    Array.prototype.forEach.call(document.querySelectorAll(".opt"),function(b){
+      b.onclick=function(){
+        state[Q.key]=b.getAttribute("data-val");
+        if(state.step<QUESTIONS.length-1){ state.step++; } else { state.step="result"; }
+        render();
+      };
+    });
+    if(state.step>0){ document.getElementById("back").onclick=function(){ state.step--; render(); }; }
+    return;
+  }
+  if(state.step==="result"){
+    var r = RESULTS[tier()];
+    var showSubstack = (tier()==="B"||tier()==="C");
+    app.innerHTML =
+      '<div class="card">'+
+      '<span class="tag">'+r.tag+'</span>'+
+      '<h2 class="rhead">'+r.h+'</h2>'+
+      '<p class="rbody">'+r.b+'</p>'+
+      '<div class="actions">'+
+        '<a class="cta primary" href="'+mailtoHref()+'">Send an email</a>'+
+        '<a class="cta secondary" href="'+BOOKING_URL+'" target="_blank" rel="noopener">Book a call</a>'+
+      '</div>'+
+      (showSubstack?'<p class="subtle">Prefer to get a feel for the work first? Read <a href="'+SUBSTACK_URL+'" target="_blank" rel="noopener">People &amp; Places on Substack</a>.</p>':'')+
+      '<div class="btnrow"><button class="back" id="restart">&#8635; Start over</button></div>'+
+      '</div>';
+    document.getElementById("restart").onclick=function(){ state={step:"intro",who:null,need:null,stage:null}; render(); };
+    return;
+  }
+}
+
+render();
+</script>
+</body>
+</html>

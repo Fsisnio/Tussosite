@@ -65,9 +65,13 @@ header.site {
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
   text-decoration: none;
   margin-right: auto;
+}
+
+.brand img {
+  height: 3.5rem;
+  width: auto;
 }
 
 .mark {
@@ -195,6 +199,20 @@ h1 {
 
 .btn.light:hover { background: var(--paper); }
 
+.btn.ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.btn.ghost:hover { background: rgba(255, 255, 255, 0.12); }
+
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+.engage-alt { margin: 0.85rem 0 0; font-size: 0.95rem; }
+
+.engage-alt a, .engage-note a { color: #fff; }
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
@@ -228,7 +246,9 @@ h1 {
 
 .hero-photo img {
   width: 100%;
-  height: auto;
+  height: clamp(16rem, 34vw, 24rem);
+  object-fit: cover;
+  object-position: center 20%;
 }
 
 .hero-photo figcaption {
@@ -301,7 +321,8 @@ h1 {
 
 .stack-photo img {
   width: 100%;
-  height: auto;
+  height: 13rem;
+  object-fit: cover;
 }
 
 .stack-photo figcaption {
@@ -559,7 +580,7 @@ main > section.wrap:last-child { padding-bottom: 3rem; }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 36rem);
   gap: 2rem;
   padding-bottom: 3rem;
 }
@@ -660,6 +681,18 @@ footer.site a:hover { text-decoration: underline; }
 }
 
 .legal-row a { color: var(--muted); }
+
+.legal-row .credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+}
+
+.legal-row .credit img {
+  height: 1.45rem;
+  width: auto;
+}
 
 .credit span { letter-spacing: 0.01em; }
 

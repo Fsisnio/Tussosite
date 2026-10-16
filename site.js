@@ -48,9 +48,7 @@ if (form) {
     const message = String(data.get("message") || "").trim();
     const subject = encodeURIComponent(`${topic} — ${name}`);
     const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-    const to = topic === "English" || topic === "Writing"
-      ? "experts@peoplanplaces.com"
-      : "emmanuel.awohouedji@gmail.com";
+    const to = "experts@peoplanplaces.com";
     window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
   });
 }
